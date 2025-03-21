@@ -1,0 +1,21 @@
+name: Caller Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: echo "Build completed!"
+
+      - name: Trigger Repository B Workflow
+        run: |
+          curl -X POST https://api.github.com/repos/vishnuPratapBanki/environment_testing/dispatches \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: token ${{ secrets.REPO_B_TOKEN }}" \
+          -d '{"event_type": "trigger-workflow"}'
