@@ -2,6 +2,11 @@ name: Caller Workflow
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to pass'
+        required: true
+        default: '1.0.0'
 
 jobs:
   build:
@@ -26,5 +31,6 @@ jobs:
               -H "Authorization: token ${{ secrets.REPO_B_TOKEN }}" \
               -d '{ "ref": "branch-2" ,
                     "inputs": {
-                  "version": "1.1.0"
-                }}'
+                    "version": "${{ github.event.inputs.version }}"
+                    }
+                  }'
