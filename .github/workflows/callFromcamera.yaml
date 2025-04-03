@@ -1,6 +1,21 @@
 name: Caller Wfl
-On:
+on:
   workflow_dispatch:
     inputs:
       version:
-        description
+        description: 'version for current release'
+        required: true
+        type: string
+env:
+  USERNAME: "VishnuPratapBankii"
+  TOKEN: ${{}}
+
+jobs:
+  
+  call-the-deploy-wfl:
+    uses: VishnuPratapBanki/environment_testing/.github/workflows/called.yaml@main
+    with:
+      version: ${{inputs.version}}
+    secrets:
+      TOKEN: ${{secrets.myToken}}
+
