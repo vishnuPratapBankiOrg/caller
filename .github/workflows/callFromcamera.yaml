@@ -8,7 +8,7 @@ on:
         type: string
 env:
   USERNAME: "VishnuPratapBankii"
-  TOKEN: ${{}}
+  TOKEN: ${{secrets.MYTOKEN}}
 
 jobs:
   
@@ -17,5 +17,5 @@ jobs:
     with:
       version: ${{inputs.version}}
     secrets:
-      TOKEN: ${{secrets.myToken}}
+      TOKEN: ${{secrets.MYTOKEN}}
 
