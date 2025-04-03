@@ -14,6 +14,8 @@ jobs:
   
   call-the-deploy-wfl:
     uses: VishnuPratapBanki/environment_testing/.github/workflows/called.yaml@main
+    permissions:
+      contents: write
     with:
       version: ${{inputs.version}}
     secrets:
