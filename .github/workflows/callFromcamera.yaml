@@ -19,5 +19,5 @@ jobs:
     with:
       version: ${{inputs.version}}
     secrets:
-      token: ${{secrets.MYTOKEN}}
+      token: ${{secrets.USER_TOKEN}}
 
