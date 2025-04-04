@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build
-        run: echo "Build completed!!"
+        run: echo "Build completed!"
 
       - name: Trigger Repository B Workflow
         run: |
