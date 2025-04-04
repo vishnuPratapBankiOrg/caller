@@ -18,6 +18,6 @@ jobs:
       contents: write
     with:
       version: ${{inputs.version}}
-    secrets:
-      token: ${{secrets.MYTOKEN}}
+#    secrets:
+#      token: ${{secrets.MYTOKEN}}
 
