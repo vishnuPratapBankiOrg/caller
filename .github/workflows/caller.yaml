@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to 111ps'
+        description: 'Version to 111p1s'
         required: true
         default: '1.0.0'
 
