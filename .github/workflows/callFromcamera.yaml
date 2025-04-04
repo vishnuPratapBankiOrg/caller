@@ -20,6 +20,6 @@ jobs:
       version: ${{inputs.version}}
     secrets:
       MYTOKEN: ${{secrets.MYTOKEN}}
-      USER_FINE: ${{USER_FINE}}
+      USER_FINE: ${{secrets.USER_FINE}}
 
 
