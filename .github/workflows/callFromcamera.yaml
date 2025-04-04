@@ -19,7 +19,8 @@ jobs:
     with:
       version: ${{inputs.version}}
     secrets:
-      MYTOKEN: ${{secrets.MYTOKEN}}
+      MY_TOKEN: ${{secrets.MY_TOKEN}}
       USER_FINE: ${{secrets.USER_FINE}}
+      USER_TOKEN: ${{secrets.USER_TOKEN}}
 
 
