@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to pass'
+        description: 'Version to passs'
         required: true
         default: '1.0.0'
 
