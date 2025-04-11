@@ -1,0 +1,21 @@
+@echo off
+SETLOCAL ENABLEDELAYEDEXPANSION
+
+:: Check if a folder path was provided
+IF "%~1"=="" (
+    echo Drag and drop a folder onto this .bat file to delete it.
+    pause
+    exit /b
+)
+
+SET TARGET="%~1"
+echo Deleting contents of: !TARGET!
+
+:: Mirror the empty folder to delete contents
+robocopy C:\EmptyFolder !TARGET! /MIR > nul
+
+:: Delete the now-empty folder itself
+rmdir /S /Q !TARGET!
+
+echo Folder deleted successfully.
+pause
